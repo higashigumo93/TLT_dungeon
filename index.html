@@ -65,11 +65,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/TRT_dungeon.loader.js";
+      var loaderUrl = buildUrl + "/TLT_dungeon_WebGL_for_build.loader.loader.js";
       var config = {
-        dataUrl: buildUrl + "/TRT_dungeon.data",
-        frameworkUrl: buildUrl + "/TRT_dungeon.framework.js",
-        codeUrl: buildUrl + "/TRT_dungeon.wasm",
+        dataUrl: buildUrl + "/TLT_dungeon_WebGL_for_build.loader.data",
+        frameworkUrl: buildUrl + "/TLT_dungeon_WebGL_for_build.loader.framework.js",
+        codeUrl: buildUrl + "/TLT_dungeon_WebGL_for_build.loader.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "言うほど長いか？ダンジョン",
@@ -113,7 +113,7 @@
         var windowWidth = document.querySelector("#unity-container").clientWidth;
         var windowHeight = document.querySelector("#unity-container").clientHeight;
         var window_aspect_ratio = windowWidth * 1.0 / windowHeight;
-        var preferred_aspect_ratio = 16.0 / 9.0;
+        var preferred_aspect_ratio = 640.0 / 960.0;
 
         if(window_aspect_ratio >= preferred_aspect_ratio){
           // widrh 3200 heigh 900 
