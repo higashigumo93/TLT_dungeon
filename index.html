@@ -82,28 +82,8 @@
       // Set this to false if you want to decouple this synchronization from
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
 
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-      // canvas.style.width = "100%";
-      // canvas.style.height = "100%";
-
-      // var resizeFun = function(event){
-      //   var newWidth = canvas.getBoundingClientRect().width;
-      //   var newHeight = newWidth * (9.0 / 16.0);
-
-      //   canvas.style.height = newHeight + "px";
-      //   console.log("Resize me! ")
-      //   console.log(newWidth)
-      //   console.log(newHeight)
-      //   console.dir(canvas.style)
-      // }
-      // window.addEventListener('resize', resizeFun);
-
-      // resizeFun(null)
-
-
-
       loadingBar.style.display = "block";
 
       canvas.style.width = "100%";
@@ -116,25 +96,13 @@
         var preferred_aspect_ratio = 640.0 / 960.0;
 
         if(window_aspect_ratio >= preferred_aspect_ratio){
-          // widrh 3200 heigh 900 
-          // width should ne 1600
-          // width = 900 * (16 / 9) = 1600
           width = preferred_aspect_ratio * windowHeight;
           height = windowHeight;
         }else{
-          // widrh 1600 heigh 20000 
-          // height should be 900 
-          // 
-          // height = 900 / (16 / 9) = 900
           width = windowWidth;
           height =  windowWidth / preferred_aspect_ratio;
         }
 
-        // var newWidth = canvas.getBoundingClientRect().width;
-        // var newHeight = newWidth * (9.0 / 16.0);
-
-        // canvas.width = width + "px";
-        // canvas.height = height + "px";
         canvas.style.width = width + "px";
         canvas.style.height = height + "px";
         console.log("Resize me! ")
@@ -144,8 +112,6 @@
         console.log("window original height", windowHeight)
         console.log("canvas width", canvas.width)
         console.log("canvas height", canvas.height)
-        // console.log(newWidth)
-        // console.log(newHeight)
         console.dir(canvas.style)
       }
       window.addEventListener('resize', resizeFun);
@@ -159,9 +125,6 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
-                // fullscreenButton.onclick = () => {
-                //   unityInstance.SetFullscreen(1);
-                // };
               }).catch((message) => {
                 alert(message);
               });
